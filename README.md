@@ -1,4 +1,3 @@
-Here's the ordered and neatly formatted `README.md`:
 
 ---
 
@@ -124,14 +123,3 @@ video-management-app/
 
 ---
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).  
-
----
-
-### ✨ Happy Coding! 🎥  
-
----
-
-This version has the sections in logical order, and everything is structured for readability and clarity. Replace the placeholder GitHub link with the actual one if necessary.
