@@ -1,9 +1,10 @@
-Here is a more visually structured and neatly formatted `README.md` file: 
+Here's the ordered and neatly formatted `README.md`:
 
-```markdown
+---
+
 # 📹 Video Management App
 
-A powerful and intuitive application for managing video content, featuring upload, viewing, and organizational capabilities.  
+A powerful and intuitive application for managing video content, featuring video upload, viewing, and organizational capabilities.
 
 ---
 
@@ -44,16 +45,16 @@ A powerful and intuitive application for managing video content, featuring uploa
 ```
 video-management-app/
 ├── routes/
-│   └── videoRoutes.js   # API routes for video management
+│   └── videoRoutes.js     # API routes for video management
 ├── controllers/
 │   └── videoController.js # Business logic for video operations
 ├── models/
-│   └── Video.js         # Mongoose schema for video data
+│   └── Video.js           # Mongoose schema for video data
 ├── public/
-│   └── uploads/         # Folder for storing uploaded videos
-├── frontend/            # React.js frontend application
-├── server.js            # Main server entry point
-└── .env                 # Environment variables
+│   └── uploads/           # Folder for storing uploaded videos
+├── frontend/              # React.js frontend application
+├── server.js              # Main server entry point
+└── .env                   # Environment variables
 ```
 
 ---
@@ -110,7 +111,7 @@ video-management-app/
 
 ## 🖥️ Usage
 
-1. Visit the [Frontend link](https://video-management-app-front-end.vercel.app/).  
+1. Visit the **Frontend**: [Video Management App Frontend](https://video-management-app-front-end.vercel.app/).  
 2. Upload videos via the user interface.  
 3. View, manage, and organize your video collection seamlessly.  
 
@@ -130,6 +131,7 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ### ✨ Happy Coding! 🎥  
-```
 
-This version is clean, visually appealing, and includes well-structured sections with clear headings and separators for readability. You can replace the placeholder `https://github.com/your-repo/video-management-app.git` with the actual repository link.
+---
+
+This version has the sections in logical order, and everything is structured for readability and clarity. Replace the placeholder GitHub link with the actual one if necessary.
