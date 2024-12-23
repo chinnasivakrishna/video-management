@@ -1,125 +1,172 @@
 
----
 
-# 📹 Video Management App
+# Video Management Application
 
-A powerful and intuitive application for managing video content, featuring video upload, viewing, and organizational capabilities.
+A full-stack video management application that allows users to upload, manage, and stream videos with Google Drive integration.
 
----
+## Live Demo
+- Frontend: [https://video-management-app-front-end.vercel.app/](https://video-management-app-front-end.vercel.app/)
+- Backend: [https://video-management-app.onrender.com](https://video-management-app.onrender.com)
 
-## 🚀 Deployment Links
+Demo Credentials:
+- Email: admin@gmail.com
+- Password: sivakrishna
+- (Or create your own account through registration)
 
-- **Frontend**: [Video Management App Frontend](https://video-management-app-front-end.vercel.app/)  
-- **Backend**: [Video Management App Backend](https://video-management-app.onrender.com/)  
+## Features
 
----
+- User authentication (JWT)
+- Video upload (local & Google Drive)
+- Video streaming with custom controls
+- Search and filter functionality
+- Tag-based organization
+- Responsive design
+- Secure file handling
 
-## 🌟 Features
+## Tech Stack
 
-- Upload and manage video files effortlessly.  
-- User-friendly interface for organizing and viewing videos.  
-- Seamless integration between frontend and backend.  
+### Frontend
+- React.js
+- Material-UI (MUI)
+- React Router
+- Axios
+- Google Drive API
+- JWT Authentication
 
----
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- JWT
+- Multer (file handling)
+- Cookie-parser
 
-## 🛠️ Tech Stack
+## Setup Instructions
 
-### **Frontend**
-- **Framework**: React.js  
-- **Hosting**: Vercel  
+### Backend Setup
 
-### **Backend**
-- **Framework**: Node.js with Express.js  
-- **Database**: MongoDB  
-- **Hosting**: Render  
-
-### **Additional Tools**
-- **Multer**: For handling file uploads.  
-- **Dotenv**: For environment variable management.  
-
----
-
-## 📂 Folder Structure
-
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd video-manager
 ```
-video-management-app/
-├── routes/
-│   └── videoRoutes.js     # API routes for video management
-├── controllers/
-│   └── videoController.js # Business logic for video operations
+
+2. Install dependencies
+```bash
+cd backend
+npm install
+```
+
+3. Create `.env` file
+```env
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+PORT=5000
+```
+
+4. Start the server
+```bash
+npm start
+```
+
+### Frontend Setup
+
+1. Navigate to frontend directory
+```bash
+cd frontend
+npm install
+```
+
+2. Create `.env` file
+```env
+REACT_APP_GOOGLE_API_KEY=your_google_api_key
+REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id
+REACT_APP_API_URL=http://localhost:5000
+```
+
+3. Start the application
+```bash
+npm start
+```
+
+## Project Structure
+
+### Backend
+```
+backend/
 ├── models/
-│   └── Video.js           # Mongoose schema for video data
-├── public/
-│   └── uploads/           # Folder for storing uploaded videos
-├── frontend/              # React.js frontend application
-├── server.js              # Main server entry point
-└── .env                   # Environment variables
+│   ├── User.js
+│   └── Video.js
+├── routes/
+│   ├── authRoutes.js
+│   └── videoRoutes.js
+├── middleware/
+│   └── auth.js
+└── server.js
 ```
 
----
+### Frontend
+```
+frontend/
+├── src/
+│   ├── components/
+│   │   ├── auth/
+│   │   └── videos/
+│   ├── hooks/
+│   ├── utils/
+│   └── App.js
+└── public/
+```
 
-## ⚙️ Installation and Setup
+## API Endpoints
 
-### **Prerequisites**
-- Node.js (v20.13.1 or higher)  
-- MongoDB (local or cloud instance)  
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - User login
+- `POST /api/auth/logout` - User logout
 
-### **Backend Setup**
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-repo/video-management-app.git
-   cd video-management-app
-   ```
+### Videos
+- `POST /api/videos/upload` - Upload video
+- `GET /api/videos` - Get all videos
+- `GET /api/videos/:id` - Get single video
+- `DELETE /api/videos/:id` - Delete video
 
-2. Install dependencies:  
-   ```bash
-   npm install
-   ```
+## Security Features
 
-3. Configure environment variables:  
-   Create a `.env` file in the root directory and add the following:  
-   ```env
-   PORT=5000
-   MONGO_URI=your_mongodb_connection_string
-   ```
+- JWT Authentication
+- HTTP-Only Cookies
+- Protected Routes
+- Input Validation
+- File Type Validation
+- Secure Password Hashing
 
-4. Start the backend server:  
-   ```bash
-   node server.js
-   ```  
-   The backend will run at `http://localhost:5000`.  
+## Deployment
 
-### **Frontend Setup**
-1. Navigate to the `frontend` directory:  
-   ```bash
-   cd frontend
-   ```
+The application is deployed using:
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
 
-2. Install dependencies:  
-   ```bash
-   npm install
-   ```
+## Contributing
 
-3. Start the frontend server:  
-   ```bash
-   npm start
-   ```  
-   The application will be available at `http://localhost:3000`.  
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
 
----
+## License
 
-## 🖥️ Usage
+This project is licensed under the MIT License.
+```
 
-1. Visit the **Frontend**: [Video Management App Frontend](https://video-management-app-front-end.vercel.app/).  
-2. Upload videos via the user interface.  
-3. View, manage, and organize your video collection seamlessly.  
-
----
-
-## 🔧 Troubleshooting
-
-- **Backend Issues**: Ensure the database connection string in `.env` is valid.  
-- **File Upload Issues**: Verify that the `public/uploads` directory exists and has appropriate permissions.  
-
----
+This README provides:
+1. Clear project overview
+2. Setup instructions
+3. Project structure
+4. API documentation
+5. Security features
+6. Deployment information
+7. Live demo links and credentials
+8. Contributing guidelines
 
